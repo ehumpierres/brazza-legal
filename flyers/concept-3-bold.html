@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brazza Flyer — Concept 3: Bold Adventure</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Nunito', sans-serif; background: #e0e0e0;
+            padding: 40px; display: flex; flex-direction: column;
+            align-items: center; gap: 40px;
+        }
+        h1 { color: #1B4D3E; font-size: 24px; }
+        .flyer {
+            width: 5.5in; height: 4.25in; background: #F26B3A;
+            border-radius: 12px; padding: 28px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            position: relative; overflow: hidden;
+        }
+        .flyer::before {
+            content: '🏆'; position: absolute; top: 20px; right: 30px;
+            font-size: 80px; opacity: 0.2;
+        }
+        .top-bar {
+            display: flex; justify-content: space-between;
+            align-items: center; margin-bottom: 12px;
+        }
+        .logo { color: white; font-size: 22px; font-weight: 800; letter-spacing: 3px; }
+        .free-badge {
+            background: #FFD166; color: #1B4D3E;
+            padding: 6px 16px; border-radius: 20px;
+            font-weight: 800; font-size: 13px;
+        }
+        .main-content { display: flex; gap: 24px; }
+        .left { flex: 1; }
+        .kid-callout {
+            background: white; color: #F26B3A;
+            display: inline-block; padding: 4px 12px; border-radius: 6px;
+            font-size: 11px; font-weight: 800;
+            text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;
+        }
+        .headline {
+            font-size: 36px; font-weight: 900; color: white;
+            line-height: 1.0; margin-bottom: 12px;
+            text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+        }
+        .headline .gold { color: #FFD166; }
+        .subhead {
+            font-size: 14px; color: rgba(255,255,255,0.9);
+            line-height: 1.4; margin-bottom: 16px;
+        }
+        .features { display: flex; gap: 16px; }
+        .feature {
+            display: flex; align-items: center; gap: 6px;
+            color: white; font-size: 12px; font-weight: 700;
+        }
+        .feature-icon { font-size: 16px; }
+        .right {
+            width: 150px; background: #1B4D3E; border-radius: 16px;
+            padding: 20px; text-align: center;
+            display: flex; flex-direction: column; justify-content: center;
+        }
+        .qr-placeholder {
+            width: 90px; height: 90px; background: white; border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 10px; color: #1B4D3E; font-weight: 700;
+            margin: 0 auto 12px;
+        }
+        .scan-text { color: #FFD166; font-size: 12px; font-weight: 800; margin-bottom: 4px; }
+        .app-text { color: rgba(255,255,255,0.6); font-size: 9px; line-height: 1.4; }
+        .bottom-bar {
+            position: absolute; bottom: 0; left: 0; right: 0;
+            background: #1B4D3E; padding: 10px 28px;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .works-at { color: rgba(255,255,255,0.7); font-size: 11px; }
+        .works-at strong { color: white; }
+        .ages { color: rgba(255,255,255,0.5); font-size: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Concept 3: Bold Adventure (Orange)</h1>
+    <div class="flyer">
+        <div class="top-bar">
+            <div class="logo">BRAZZA</div>
+            <div class="free-badge">100% FREE</div>
+        </div>
+        <div class="main-content">
+            <div class="left">
+                <div class="kid-callout">👋 Hey Kids!</div>
+                <div class="headline">
+                    Ready to find<br>
+                    <span class="gold">hidden treasure</span><br>
+                    in the museum?
+                </div>
+                <div class="subhead">
+                    Download the app, pick a character guide, and start your scavenger hunt adventure!
+                </div>
+                <div class="features">
+                    <div class="feature"><span class="feature-icon">🗺️</span> Clues</div>
+                    <div class="feature"><span class="feature-icon">📖</span> Stories</div>
+                    <div class="feature"><span class="feature-icon">📸</span> Photos</div>
+                    <div class="feature"><span class="feature-icon">🏆</span> Treasure!</div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="qr-placeholder">QR<br>CODE</div>
+                <div class="scan-text">Scan me!</div>
+                <div class="app-text">or search "Brazza"<br>in the App Store</div>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <div class="works-at">Works at <strong>The Metropolitan Museum of Art</strong></div>
+            <div class="ages">Ages 4-12</div>
+        </div>
+    </div>
+</body>
+</html>
