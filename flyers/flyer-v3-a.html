@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brazza Flyer - Version A</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: #f0f0f0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .flyer {
+            width: 5.5in;
+            height: 8.5in;
+            background: #2D5A47;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            display: flex;
+            flex-direction: column;
+        }
+        .hero {
+            padding: 40px 30px 30px;
+            text-align: center;
+            color: white;
+        }
+        .logo {
+            font-size: 56px;
+            font-weight: 900;
+            margin-bottom: 10px;
+            letter-spacing: -2px;
+        }
+        .headline {
+            font-size: 34px;
+            font-weight: 800;
+            line-height: 1.1;
+        }
+        .headline .highlight {
+            color: #E86F4A;
+        }
+        .content-box {
+            flex: 1;
+            background: #FDF8F3;
+            margin: 0 20px;
+            border-radius: 28px 28px 0 0;
+            padding: 28px 24px;
+            display: flex;
+            flex-direction: column;
+        }
+        .characters-row {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+        .char-card {
+            text-align: center;
+        }
+        .char-img {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background: white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            overflow: hidden;
+            border: 4px solid #E86F4A;
+        }
+        .char-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .how-it-works {
+            background: white;
+            border-radius: 20px;
+            padding: 22px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        .section-title {
+            font-size: 13px;
+            font-weight: 800;
+            color: #E86F4A;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 18px;
+            text-align: center;
+        }
+        .steps {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+        }
+        .step {
+            flex: 1;
+            text-align: center;
+        }
+        .step-icon {
+            width: 48px;
+            height: 48px;
+            background: #2D5A47;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            font-weight: 800;
+            margin: 0 auto 10px;
+        }
+        .step-label {
+            font-size: 13px;
+            font-weight: 700;
+            color: #333;
+            line-height: 1.3;
+        }
+        .qr-section {
+            margin-top: auto;
+            background: white;
+            border-radius: 20px;
+            padding: 22px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        #qrcode {
+            flex-shrink: 0;
+        }
+        #qrcode canvas, #qrcode img {
+            width: 100px !important;
+            height: 100px !important;
+        }
+        .qr-info {
+            flex: 1;
+        }
+        .qr-info .main {
+            font-size: 22px;
+            font-weight: 800;
+            color: #2D5A47;
+            line-height: 1.2;
+        }
+        .qr-info .sub {
+            font-size: 13px;
+            color: #666;
+            margin-top: 6px;
+        }
+        .badges {
+            display: flex;
+            gap: 10px;
+            margin-top: 12px;
+        }
+        .badge {
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+        .badge.free {
+            background: #E86F4A;
+            color: white;
+        }
+        .badge.ios {
+            background: #000;
+            color: white;
+        }
+        .footer {
+            background: #E86F4A;
+            color: white;
+            text-align: center;
+            padding: 16px 20px;
+            font-size: 15px;
+            font-weight: 700;
+        }
+        @media print {
+            body { background: none; padding: 0; }
+            .flyer { box-shadow: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="flyer">
+        <div class="hero">
+            <div class="logo">🦁 Brazza</div>
+            <h1 class="headline">Museum Adventures<br><span class="highlight">Made Magical</span></h1>
+        </div>
+        
+        <div class="content-box">
+            <div class="characters-row">
+                <div class="char-card">
+                    <div class="char-img"><img src="../promo-assets/characters/professor_whiskers.png" alt="Professor Whiskers"></div>
+                </div>
+                <div class="char-card">
+                    <div class="char-img"><img src="../promo-assets/characters/captain_chrono.png" alt="Captain Chrono"></div>
+                </div>
+                <div class="char-card">
+                    <div class="char-img"><img src="../promo-assets/characters/stella_stargazer.png" alt="Stella Stargazer"></div>
+                </div>
+                <div class="char-card">
+                    <div class="char-img"><img src="../promo-assets/characters/rex_the_explorer.png" alt="Rex the Explorer"></div>
+                </div>
+                <div class="char-card">
+                    <div class="char-img"><img src="../promo-assets/characters/marina_the_pirate.png" alt="Marina"></div>
+                </div>
+            </div>
+            
+            <div class="how-it-works">
+                <div class="section-title">How It Works</div>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-icon">1</div>
+                        <div class="step-label">Download the app</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">2</div>
+                        <div class="step-label">Pick your host & adventure</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">3</div>
+                        <div class="step-label">Start the hunt!</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="qr-section">
+                <div id="qrcode"></div>
+                <div class="qr-info">
+                    <div class="main">Scan to Start Your Adventure</div>
+                    <div class="sub">Download free on the App Store</div>
+                    <div class="badges">
+                        <span class="badge free">FREE</span>
+                        <span class="badge ios">App Store</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            🏛️ Now live at The Metropolitan Museum of Art
+        </div>
+    </div>
+    
+    <script>
+        new QRCode(document.getElementById("qrcode"), {
+            text: "https://apps.apple.com/us/app/brazza-museum-adventures/id6759573887",
+            width: 100,
+            height: 100,
+            colorDark: "#2D5A47",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.H
+        });
+    </script>
+</body>
+</html>

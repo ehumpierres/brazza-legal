@@ -4,65 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brazza Flyer Concepts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Nunito', -apple-system, sans-serif;
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 40px 20px;
             background: #f5f5f5;
         }
         h1 { color: #2D5A47; margin-bottom: 10px; }
         .subtitle { color: #666; margin-bottom: 30px; }
-        h2 { color: #E86F4A; margin-top: 40px; border-bottom: 2px solid #E86F4A; padding-bottom: 10px; }
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
             margin-top: 20px;
         }
         .card {
             background: white;
-            border-radius: 12px;
+            border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         }
         .card iframe {
             width: 100%;
-            height: 450px;
+            height: 500px;
             border: none;
             transform: scale(0.5);
             transform-origin: top left;
             width: 200%;
-            height: 900px;
+            height: 1000px;
         }
         .card-wrapper {
-            height: 450px;
+            height: 500px;
             overflow: hidden;
         }
         .card-info {
-            padding: 15px;
+            padding: 20px;
             border-top: 1px solid #eee;
         }
         .card-title {
-            font-weight: 700;
+            font-weight: 800;
+            font-size: 18px;
             color: #2D5A47;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
         }
         .card-desc {
-            font-size: 13px;
+            font-size: 14px;
             color: #666;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            line-height: 1.5;
         }
         .card-link {
             display: inline-block;
             background: #E86F4A;
             color: white;
-            padding: 8px 16px;
-            border-radius: 6px;
+            padding: 10px 20px;
+            border-radius: 8px;
             text-decoration: none;
-            font-size: 13px;
-            font-weight: 600;
+            font-size: 14px;
+            font-weight: 700;
         }
         .card-link:hover {
             background: #d55f3d;
@@ -70,93 +72,58 @@
         .note {
             background: #e8f5e9;
             border-left: 4px solid #2D5A47;
-            padding: 15px;
+            padding: 15px 20px;
             margin: 20px 0;
             border-radius: 0 8px 8px 0;
+            font-size: 14px;
+        }
+        .assets-link {
+            margin-top: 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+        .assets-link a {
+            color: #E86F4A;
+            font-weight: 700;
         }
     </style>
 </head>
 <body>
-    <h1>🦁 Brazza Flyer Concepts</h1>
-    <p class="subtitle">Print-ready flyer designs for promotional use (5.5" × 8.5" half-page)</p>
+    <h1>🦁 Brazza Flyers</h1>
+    <p class="subtitle">Print-ready flyer designs • 5.5" × 8.5" half-page</p>
     
     <div class="note">
-        <strong>✨ New!</strong> Version 2 flyers include actual character icons and QR code for the App Store.
+        <strong>✨ Final versions</strong> — Character icons, QR code, and "Download → Pick → Start!" copy.
     </div>
     
-    <h2>Version 2 (With Characters & QR Code)</h2>
     <div class="grid">
         <div class="card">
             <div class="card-wrapper">
-                <iframe src="flyer-v2-1.html"></iframe>
+                <iframe src="flyer-v3-a.html"></iframe>
             </div>
             <div class="card-info">
-                <div class="card-title">Concept 1: Classic</div>
-                <div class="card-desc">Clean layout with character circles and numbered steps</div>
-                <a href="flyer-v2-1.html" class="card-link" target="_blank">View Full Size →</a>
+                <div class="card-title">Version A: Clean</div>
+                <div class="card-desc">Numbered steps layout. Clear "How It Works" section with big step numbers.</div>
+                <a href="flyer-v3-a.html" class="card-link" target="_blank">View Full Size →</a>
             </div>
         </div>
         
         <div class="card">
             <div class="card-wrapper">
-                <iframe src="flyer-v2-2.html"></iframe>
+                <iframe src="flyer-v3-b.html"></iframe>
             </div>
             <div class="card-info">
-                <div class="card-title">Concept 2: Bold</div>
-                <div class="card-desc">Dark green header, all 5 characters featured</div>
-                <a href="flyer-v2-2.html" class="card-link" target="_blank">View Full Size →</a>
-            </div>
-        </div>
-        
-        <div class="card">
-            <div class="card-wrapper">
-                <iframe src="flyer-v2-3.html"></iframe>
-            </div>
-            <div class="card-info">
-                <div class="card-title">Concept 3: Playful</div>
-                <div class="card-desc">Featured character spotlight with value props grid</div>
-                <a href="flyer-v2-3.html" class="card-link" target="_blank">View Full Size →</a>
+                <div class="card-title">Version B: Detailed</div>
+                <div class="card-desc">Character names shown. Flow-style steps. Feature badges (audio, languages, duration).</div>
+                <a href="flyer-v3-b.html" class="card-link" target="_blank">View Full Size →</a>
             </div>
         </div>
     </div>
     
-    <h2>Version 1 (Original Concepts)</h2>
-    <div class="grid">
-        <div class="card">
-            <div class="card-wrapper">
-                <iframe src="flyer-concept-1.html"></iframe>
-            </div>
-            <div class="card-info">
-                <div class="card-title">Original Concept 1</div>
-                <div class="card-desc">Emoji-based characters</div>
-                <a href="flyer-concept-1.html" class="card-link" target="_blank">View Full Size →</a>
-            </div>
-        </div>
-        
-        <div class="card">
-            <div class="card-wrapper">
-                <iframe src="flyer-concept-2.html"></iframe>
-            </div>
-            <div class="card-info">
-                <div class="card-title">Original Concept 2</div>
-                <div class="card-desc">Emoji-based characters</div>
-                <a href="flyer-concept-2.html" class="card-link" target="_blank">View Full Size →</a>
-            </div>
-        </div>
-        
-        <div class="card">
-            <div class="card-wrapper">
-                <iframe src="flyer-concept-3.html"></iframe>
-            </div>
-            <div class="card-info">
-                <div class="card-title">Original Concept 3</div>
-                <div class="card-desc">Emoji-based characters</div>
-                <a href="flyer-concept-3.html" class="card-link" target="_blank">View Full Size →</a>
-            </div>
-        </div>
+    <div class="assets-link">
+        <strong>📦 Other Assets:</strong> <a href="../promo-assets/">Character icons & QR code generator →</a>
     </div>
-    
-    <h2>📦 Other Assets</h2>
-    <p><a href="../promo-assets/">Character icons & QR code generator →</a></p>
 </body>
 </html>
