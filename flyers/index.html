@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brazza Flyers</title>
+    <title>Brazza Flyers - A/B Test</title>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
         body {
@@ -50,11 +50,23 @@
             color: #2D5A47;
             margin-bottom: 8px;
         }
-        .card-desc {
-            font-size: 14px;
-            color: #666;
+        .card-copy {
+            background: #f5f5f5;
+            padding: 12px;
+            border-radius: 8px;
             margin-bottom: 15px;
-            line-height: 1.5;
+        }
+        .card-copy .label {
+            font-size: 11px;
+            font-weight: 700;
+            color: #E86F4A;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+        .card-copy .text {
+            font-size: 13px;
+            color: #333;
+            line-height: 1.4;
         }
         .card-link {
             display: inline-block;
@@ -83,29 +95,43 @@
     </style>
 </head>
 <body>
-    <h1>🦁 Brazza Flyers</h1>
-    <p class="subtitle">Print-ready • 5.5" × 8.5" half-page • Same layout, different headlines</p>
+    <h1>🦁 Brazza Flyers — A/B Test</h1>
+    <p class="subtitle">Same layout (Concept 2 style) • Different copy • Use different QR codes to track</p>
     
     <div class="grid">
         <div class="card">
             <div class="card-wrapper">
-                <iframe src="flyer-final-a.html"></iframe>
+                <iframe src="flyer-test-a.html"></iframe>
             </div>
             <div class="card-info">
-                <div class="card-title">Version A</div>
-                <div class="card-desc">"Museum Adventures Made Magical"</div>
-                <a href="flyer-final-a.html" class="card-link" target="_blank">View Full Size →</a>
+                <div class="card-title">Test A</div>
+                <div class="card-copy">
+                    <div class="label">Headline</div>
+                    <div class="text">"Museum Adventures Made Magical"</div>
+                </div>
+                <div class="card-copy">
+                    <div class="label">Subhead</div>
+                    <div class="text">"Story-driven treasure hunts for kids & families"</div>
+                </div>
+                <a href="flyer-test-a.html" class="card-link" target="_blank">View Full Size →</a>
             </div>
         </div>
         
         <div class="card">
             <div class="card-wrapper">
-                <iframe src="flyer-final-b.html"></iframe>
+                <iframe src="flyer-test-b.html"></iframe>
             </div>
             <div class="card-info">
-                <div class="card-title">Version B</div>
-                <div class="card-desc">"Turn Your Museum Visit Into a Treasure Hunt!"</div>
-                <a href="flyer-final-b.html" class="card-link" target="_blank">View Full Size →</a>
+                <div class="card-title">Test B</div>
+                <div class="card-copy">
+                    <div class="label">Headline</div>
+                    <div class="text">"Ready to Find the Treasure Hidden in the Museum?"</div>
+                </div>
+                <div class="card-copy">
+                    <div class="label">Subhead</div>
+                    <div class="text">"Brazza turns your visit into an adventure scavenger hunt"</div>
+                </div>
+                <a href="flyer-test-b.html" class="card-link" target="_blank">View Full Size →</a>
             </div>
         </div>
     </div>
