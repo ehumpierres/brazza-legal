@@ -32,7 +32,13 @@
         .headline { font-size: 32px; font-weight: 800; color: #1B4D3E; line-height: 1.1; margin-bottom: 12px; }
         .headline span { color: #F26B3A; }
         .subhead { font-size: 14px; color: #1B4D3E; opacity: 0.7; line-height: 1.4; margin-bottom: 16px; }
-        .characters { display: flex; gap: 8px; margin-bottom: 12px; }
+        .characters { display: flex; gap: 12px; margin-bottom: 8px; }
+        .char-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+        }
         .character {
             width: 44px; 
             height: 44px; 
@@ -46,6 +52,12 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+        .char-name {
+            font-size: 8px;
+            font-weight: 700;
+            color: #1B4D3E;
+            text-align: center;
         }
         .pick-text { font-size: 11px; color: #1B4D3E; opacity: 0.6; }
         .qr-section { text-align: center; margin-bottom: 16px; }
@@ -83,11 +95,26 @@
             </div>
             <div>
                 <div class="characters">
-                    <div class="character"><img src="../promo-assets/characters/professor_whiskers.png" alt="Professor Whiskers"></div>
-                    <div class="character"><img src="../promo-assets/characters/captain_chrono.png" alt="Captain Chrono"></div>
-                    <div class="character"><img src="../promo-assets/characters/marina_the_pirate.png" alt="Marina"></div>
-                    <div class="character"><img src="../promo-assets/characters/stella_stargazer.png" alt="Stella"></div>
-                    <div class="character"><img src="../promo-assets/characters/rex_the_explorer.png" alt="Rex"></div>
+                    <div class="char-wrapper">
+                        <div class="character"><img src="../promo-assets/characters/professor_whiskers.png" alt="Whiskers"></div>
+                        <div class="char-name">Whiskers</div>
+                    </div>
+                    <div class="char-wrapper">
+                        <div class="character"><img src="../promo-assets/characters/captain_chrono.png" alt="Chrono"></div>
+                        <div class="char-name">Chrono</div>
+                    </div>
+                    <div class="char-wrapper">
+                        <div class="character"><img src="../promo-assets/characters/marina_the_pirate.png" alt="Marina"></div>
+                        <div class="char-name">Marina</div>
+                    </div>
+                    <div class="char-wrapper">
+                        <div class="character"><img src="../promo-assets/characters/stella_stargazer.png" alt="Stella"></div>
+                        <div class="char-name">Stella</div>
+                    </div>
+                    <div class="char-wrapper">
+                        <div class="character"><img src="../promo-assets/characters/rex_the_explorer.png" alt="Rex"></div>
+                        <div class="char-name">Rex</div>
+                    </div>
                 </div>
                 <div class="pick-text">Pick your character guide →</div>
             </div>
@@ -99,8 +126,7 @@
                 <div class="scan-subtext">or search "Brazza" in App Store</div>
             </div>
             <div class="free-badge">FREE!</div>
-            <div class="ages">Ages 4-12</div>
-            <div class="ages" style="margin-top: 6px;">Only available for iPhone</div>
+            <div class="ages">Only available for iPhone</div>
         </div>
     </div>
     
