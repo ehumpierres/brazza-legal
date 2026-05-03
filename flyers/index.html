@@ -4,86 +4,159 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brazza Flyer Concepts</title>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Nunito', sans-serif;
-            background: #1B4D3E;
-            min-height: 100vh;
-            padding: 40px;
+            font-family: 'Nunito', -apple-system, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: #f5f5f5;
         }
-        h1 {
-            color: #FFD166;
-            font-size: 32px;
-            text-align: center;
-            margin-bottom: 8px;
+        h1 { color: #2D5A47; margin-bottom: 10px; }
+        .subtitle { color: #666; margin-bottom: 30px; }
+        h2 { color: #E86F4A; margin-top: 40px; border-bottom: 2px solid #E86F4A; padding-bottom: 10px; }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
         }
-        .subtitle {
-            color: rgba(255,255,255,0.6);
-            text-align: center;
-            margin-bottom: 40px;
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
-        .concepts {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 24px;
-            justify-content: center;
+        .card iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
+            transform: scale(0.5);
+            transform-origin: top left;
+            width: 200%;
+            height: 900px;
         }
-        .concept-card {
-            background: rgba(255,255,255,0.1);
-            border-radius: 16px;
-            padding: 24px;
-            width: 300px;
-            text-align: center;
+        .card-wrapper {
+            height: 450px;
+            overflow: hidden;
         }
-        .concept-card h2 {
-            color: white;
-            font-size: 18px;
-            margin-bottom: 8px;
+        .card-info {
+            padding: 15px;
+            border-top: 1px solid #eee;
         }
-        .concept-card p {
-            color: rgba(255,255,255,0.6);
-            font-size: 14px;
-            margin-bottom: 16px;
-            line-height: 1.4;
-        }
-        .concept-card a {
-            display: inline-block;
-            background: #F26B3A;
-            color: white;
-            padding: 12px 24px;
-            border-radius: 30px;
-            text-decoration: none;
+        .card-title {
             font-weight: 700;
+            color: #2D5A47;
+            margin-bottom: 5px;
         }
-        .concept-card a:hover {
-            background: #e55a2b;
+        .card-desc {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .card-link {
+            display: inline-block;
+            background: #E86F4A;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+        }
+        .card-link:hover {
+            background: #d55f3d;
+        }
+        .note {
+            background: #e8f5e9;
+            border-left: 4px solid #2D5A47;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
         }
     </style>
 </head>
 <body>
-    <h1>🎨 Brazza Flyer Concepts</h1>
-    <p class="subtitle">Half-page flyers for Met street promotion</p>
+    <h1>🦁 Brazza Flyer Concepts</h1>
+    <p class="subtitle">Print-ready flyer designs for promotional use (5.5" × 8.5" half-page)</p>
     
-    <div class="concepts">
-        <div class="concept-card">
-            <h2>Concept 1: 3 Steps</h2>
-            <p>Dark background, instructional flow. Download → Pick character → Find treasure.</p>
-            <a href="concept-1-steps.html">View Concept 1 →</a>
+    <div class="note">
+        <strong>✨ New!</strong> Version 2 flyers include actual character icons and QR code for the App Store.
+    </div>
+    
+    <h2>Version 2 (With Characters & QR Code)</h2>
+    <div class="grid">
+        <div class="card">
+            <div class="card-wrapper">
+                <iframe src="flyer-v2-1.html"></iframe>
+            </div>
+            <div class="card-info">
+                <div class="card-title">Concept 1: Classic</div>
+                <div class="card-desc">Clean layout with character circles and numbered steps</div>
+                <a href="flyer-v2-1.html" class="card-link" target="_blank">View Full Size →</a>
+            </div>
         </div>
         
-        <div class="concept-card">
-            <h2>Concept 2: Characters</h2>
-            <p>Light background, playful. "Bored at the museum? Not anymore." Shows all 5 characters.</p>
-            <a href="concept-2-characters.html">View Concept 2 →</a>
+        <div class="card">
+            <div class="card-wrapper">
+                <iframe src="flyer-v2-2.html"></iframe>
+            </div>
+            <div class="card-info">
+                <div class="card-title">Concept 2: Bold</div>
+                <div class="card-desc">Dark green header, all 5 characters featured</div>
+                <a href="flyer-v2-2.html" class="card-link" target="_blank">View Full Size →</a>
+            </div>
         </div>
         
-        <div class="concept-card">
-            <h2>Concept 3: Bold</h2>
-            <p>Orange high-energy. "Ready to find hidden treasure?" Speaks directly to kids.</p>
-            <a href="concept-3-bold.html">View Concept 3 →</a>
+        <div class="card">
+            <div class="card-wrapper">
+                <iframe src="flyer-v2-3.html"></iframe>
+            </div>
+            <div class="card-info">
+                <div class="card-title">Concept 3: Playful</div>
+                <div class="card-desc">Featured character spotlight with value props grid</div>
+                <a href="flyer-v2-3.html" class="card-link" target="_blank">View Full Size →</a>
+            </div>
         </div>
     </div>
+    
+    <h2>Version 1 (Original Concepts)</h2>
+    <div class="grid">
+        <div class="card">
+            <div class="card-wrapper">
+                <iframe src="flyer-concept-1.html"></iframe>
+            </div>
+            <div class="card-info">
+                <div class="card-title">Original Concept 1</div>
+                <div class="card-desc">Emoji-based characters</div>
+                <a href="flyer-concept-1.html" class="card-link" target="_blank">View Full Size →</a>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-wrapper">
+                <iframe src="flyer-concept-2.html"></iframe>
+            </div>
+            <div class="card-info">
+                <div class="card-title">Original Concept 2</div>
+                <div class="card-desc">Emoji-based characters</div>
+                <a href="flyer-concept-2.html" class="card-link" target="_blank">View Full Size →</a>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-wrapper">
+                <iframe src="flyer-concept-3.html"></iframe>
+            </div>
+            <div class="card-info">
+                <div class="card-title">Original Concept 3</div>
+                <div class="card-desc">Emoji-based characters</div>
+                <a href="flyer-concept-3.html" class="card-link" target="_blank">View Full Size →</a>
+            </div>
+        </div>
+    </div>
+    
+    <h2>📦 Other Assets</h2>
+    <p><a href="../promo-assets/">Character icons & QR code generator →</a></p>
 </body>
 </html>
