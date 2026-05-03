@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brazza App Store QR Code</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <style>
+        body {
+            font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background: #FDF8F3;
+            color: #2D5A47;
+        }
+        h1 { margin-bottom: 10px; }
+        .subtitle { color: #666; margin-bottom: 30px; }
+        #qrcode {
+            padding: 20px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        .url {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #888;
+            word-break: break-all;
+            max-width: 300px;
+            text-align: center;
+        }
+        .download-btn {
+            margin-top: 20px;
+            padding: 12px 24px;
+            background: #E86F4A;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .download-btn:hover { background: #d55f3d; }
+        .sizes {
+            margin-top: 30px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .size-btn {
+            padding: 8px 16px;
+            background: #2D5A47;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .size-btn:hover { background: #1e3d30; }
+        .size-btn.active { background: #E86F4A; }
+        @media print {
+            .no-print { display: none; }
+            body { background: white; }
+        }
+    </style>
+</head>
+<body>
+    <h1>🦁 Brazza</h1>
+    <p class="subtitle">Scan to download from the App Store</p>
+    
+    <div id="qrcode"></div>
+    
+    <p class="url">https://apps.apple.com/us/app/brazza-museum-adventures/id6759573887</p>
+    
+    <div class="sizes no-print">
+        <button class="size-btn" onclick="regenerate(200, this)">Small (200px)</button>
+        <button class="size-btn active" onclick="regenerate(300, this)">Medium (300px)</button>
+        <button class="size-btn" onclick="regenerate(400, this)">Large (400px)</button>
+        <button class="size-btn" onclick="regenerate(600, this)">XL (600px)</button>
+        <button class="size-btn" onclick="regenerate(800, this)">Print (800px)</button>
+    </div>
+    
+    <button class="download-btn no-print" onclick="downloadQR()">⬇️ Download PNG</button>
+    <p class="no-print" style="margin-top:10px;font-size:12px;color:#888;">Right-click QR code to copy or save</p>
+    
+    <script>
+        const appStoreUrl = "https://apps.apple.com/us/app/brazza-museum-adventures/id6759573887";
+        let qrcode;
+        
+        function regenerate(size, btn) {
+            document.getElementById("qrcode").innerHTML = "";
+            qrcode = new QRCode(document.getElementById("qrcode"), {
+                text: appStoreUrl,
+                width: size,
+                height: size,
+                colorDark: "#2D5A47",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H
+            });
+            document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
+            if(btn) btn.classList.add('active');
+        }
+        
+        function downloadQR() {
+            const canvas = document.querySelector("#qrcode canvas");
+            if (canvas) {
+                const link = document.createElement('a');
+                link.download = 'brazza-qr-code.png';
+                link.href = canvas.toDataURL("image/png");
+                link.click();
+            }
+        }
+        
+        regenerate(300, document.querySelector('.size-btn.active'));
+    </script>
+</body>
+</html>
