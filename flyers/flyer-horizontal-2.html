@@ -40,9 +40,26 @@
             color: white;
         }
         .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+        .logo-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+        .logo-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .logo-text {
             font-size: 42px;
             font-weight: 900;
-            margin-bottom: 12px;
             letter-spacing: -1px;
         }
         .headline {
@@ -208,7 +225,10 @@
     <div class="flyer">
         <div class="main-content">
             <div class="left-section">
-                <div class="logo">🦁 Brazza</div>
+                <div class="logo">
+                    <div class="logo-icon"><img src="../promo-assets/app-icon.png" alt="Brazza"></div>
+                    <div class="logo-text">Brazza</div>
+                </div>
                 <h1 class="headline">Ready to Find the <span class="highlight">Treasure</span> Hidden in the Museum?</h1>
                 <p class="subhead">Story-driven adventure scavenger hunts for kids & families</p>
             </div>
